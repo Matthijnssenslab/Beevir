@@ -1,0 +1,88 @@
+﻿Source;Target;targetattr;Level;weight
+Metabolism;Global and overview maps;71;1;1
+Metabolism;Carbohydrate metabolism;13;1;1
+Metabolism;Energy metabolism;4;1;1
+Metabolism;Lipid metabolism;5;1;1
+Metabolism;Nucleotide metabolism;22;1;1
+Metabolism;Amino acid metabolism;8;1;1
+Metabolism;Glycan biosynthesis and metabolism;9;1;1
+Metabolism;Metabolism of cofactors and vitamins;7;1;1
+Metabolism;Metabolism of terpenoids and polyketides;4;1;1
+Metabolism;Biosynthesis of other secondary metabolites;4;1;1
+Metabolism;Xenobiotics biodegradation and metabolism;6;1;1
+Genetic Information Processing;Translation;3;1;1
+Genetic Information Processing;Folding, sorting and degradation;2;1;1
+Genetic Information Processing;Replication and repair;41;1;1
+Environmental Information Processing;Membrane transport;4;1;1
+Environmental Information Processing;Signal transduction;7;1;1
+Cellular Processes;Transport and catabolism;2;1;1
+Cellular Processes;Cell growth and death;6;1;1
+Cellular Processes;Cellular community - prokaryotes;9;1;1
+Cellular Processes;Cell motility;1;1;1
+Global and overview maps;Metabolic pathways;43;2;43
+Global and overview maps;Biosynthesis of secondary metabolites;6;2;6
+Global and overview maps;Microbial metabolism in diverse environments;6;2;6
+Global and overview maps;Biosynthesis of antibiotics;8;2;8
+Global and overview maps;Carbon metabolism;3;2;3
+Global and overview maps;Biosynthesis of amino acids;4;2;4
+Global and overview maps;Degradation of aromatic compounds;1;2;1
+Carbohydrate metabolism;Glycolysis / Gluconeogenesis;1;2;1
+Carbohydrate metabolism;Pentose phosphate pathway;1;2;1
+Carbohydrate metabolism;Pentose and glucuronate interconversions;2;2;2
+Carbohydrate metabolism;Fructose and mannose metabolism;1;2;1
+Carbohydrate metabolism;Galactose metabolism;2;2;2
+Carbohydrate metabolism;Starch and sucrose metabolism;4;2;4
+Carbohydrate metabolism;Amino sugar and nucleotide sugar metabolism;2;2;2
+Energy metabolism;Oxidative phosphorylation;1;2;1
+Energy metabolism;Methane metabolism;1;2;1
+Energy metabolism;Sulfur metabolism;2;2;2
+Lipid metabolism;Fatty acid degradation;1;2;1
+Lipid metabolism;Glycerophospholipid metabolism;2;2;2
+Lipid metabolism;Sphingolipid metabolism;2;2;2
+Nucleotide metabolism;Purine metabolism;10;2;10
+Nucleotide metabolism;Pyrimidine metabolism;12;2;12
+Amino acid metabolism;Glycine, serine and threonine metabolism;1;2;1
+Amino acid metabolism;Cysteine and methionine metabolism;4;2;4
+Amino acid metabolism;Lysine biosynthesis;1;2;1
+Amino acid metabolism;Tyrosine metabolism;1;2;1
+Amino acid metabolism;Phenylalanine, tyrosine and tryptophan biosynthesis;1;2;1
+Glycan biosynthesis and metabolism;Various types of N-glycan biosynthesis;1;2;1
+Glycan biosynthesis and metabolism;Glycosaminoglycan degradation;1;2;1
+Glycan biosynthesis and metabolism;Glycosphingolipid biosynthesis;2;2;2
+Glycan biosynthesis and metabolism;Peptidoglycan biosynthesis;1;2;1
+Glycan biosynthesis and metabolism;Other glycan degradation;4;2;4
+Metabolism of cofactors and vitamins;Nicotinate and nicotinamide metabolism;1;2;1
+Metabolism of cofactors and vitamins;Pantothenate and CoA biosynthesis;1;2;1
+Metabolism of cofactors and vitamins;Biotin metabolism;1;2;1
+Metabolism of cofactors and vitamins;One carbon pool by folate;2;2;2
+Metabolism of cofactors and vitamins;Retinol metabolism;1;2;1
+Metabolism of cofactors and vitamins;Ubiquinone and other terpenoid-quinone biosynthesis;1;2;1
+Metabolism of terpenoids and polyketides;Polyketide sugar unit biosynthesis;3;2;3
+Metabolism of terpenoids and polyketides;Biosynthesis of vancomycin group antibiotics;1;2;1
+Biosynthesis of other secondary metabolites;Streptomycin biosynthesis;3;2;3
+Biosynthesis of other secondary metabolites;Acarbose and validamycin biosynthesis;1;2;1
+Xenobiotics biodegradation and metabolism;Chloroalkane and chloroalkene degradation;1;2;1
+Xenobiotics biodegradation and metabolism;Naphthalene degradation;1;2;1
+Xenobiotics biodegradation and metabolism; Metabolism of xenobiotics by cytochrome P450;1;2;1
+Xenobiotics biodegradation and metabolism;Drug metabolism - cytochrome P450;1;2;1
+Xenobiotics biodegradation and metabolism;Drug metabolism - other enzymes;2;2;2
+Translation;Ribosome;2;2;2
+Translation;Aminoacyl-tRNA biosynthesis;1;2;1
+Folding, sorting and degradation;Protein export;1;2;1
+Folding, sorting and degradation;RNA degradation;1;2;1
+Replication and repair;DNA replication;11;2;11
+Replication and repair; Base excision repair;5;2;5
+Replication and repair;Nucleotide excision repair;4;2;4
+Replication and repair;Mismatch repair;11;2;11
+Replication and repair;Homologous recombination;10;2;10
+Membrane transport;ABC transporters;2;2;2
+Membrane transport;Bacterial secretion system;2;2;2
+Signal transduction;Two-component system;7;2;7
+Transport and catabolism;Lysosome;2;2;2
+Cell growth and death;Cell cycle - Caulobacter;5;2;2
+Cell growth and death;Apoptosis;1;2;1
+Cellular community - prokaryotes;Quorum sensing;4;2;4
+Cellular community - prokaryotes;Biofilm formation - Vibrio cholerae;2;2;2
+Cellular community - prokaryotes;Biofilm formation - Pseudomonas aeruginosa;1;2;1
+Cellular community - prokaryotes;Biofilm formation - Escherichia coli;2;2;2
+Cell motility;Bacterial chemotaxis;1;2;1

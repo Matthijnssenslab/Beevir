@@ -1,0 +1,89 @@
+Source	Target	Numberofhits	Level
+Metabolism	Global and overview maps	71	1
+Global and overview maps	01100 Metabolic pathways	43	2
+Global and overview maps	01110 Biosynthesis of secondary metabolites	6	2
+Global and overview maps	01120 Microbial metabolism in diverse environments	6	2
+Global and overview maps	01130 Biosynthesis of antibiotics	8	2
+Global and overview maps	01200 Carbon metabolism	3	2
+Global and overview maps	01230 Biosynthesis of amino acids	4	2
+Global and overview maps	01220 Degradation of aromatic compounds	1	2
+Metabolism	Carbohydrate metabolism	13	1
+Carbohydrate metabolism	00010 Glycolysis / Gluconeogenesis	1	2
+Carbohydrate metabolism	00030 Pentose phosphate pathway	1	2
+Carbohydrate metabolism	00040 Pentose and glucuronate interconversions	2	2
+Carbohydrate metabolism	00051 Fructose and mannose metabolism	1	2
+Carbohydrate metabolism	00052 Galactose metabolism	2	2
+Carbohydrate metabolism	00500 Starch and sucrose metabolism	4	2
+Carbohydrate metabolism	00520 Amino sugar and nucleotide sugar metabolism	2	2
+Metabolism	Energy metabolism	4	1
+Energy metabolism	00190 Oxidative phosphorylation	1	2
+Energy metabolism	00680 Methane metabolism	1	2
+Energy metabolism	00920 Sulfur metabolism	2	2
+Metabolism	Lipid metabolism	4	1
+Lipid metabolism	00071 Fatty acid degradation	1	2
+Lipid metabolism	00564 Glycerophospholipid metabolism	2	2
+Lipid metabolism	00600 Sphingolipid metabolism	1	2
+Metabolism	Nucleotide metabolism	22	1
+Nucleotide metabolism	00230 Purine metabolism	10	2
+Nucleotide metabolism	00240 Pyrimidine metabolism	12	2
+Metabolism	Amino acid metabolism	8	1
+Amino acid metabolism	00260 Glycine, serine and threonine metabolism	1	2
+Amino acid metabolism	00270 Cysteine and methionine metabolism	4	2
+Amino acid metabolism	00300 Lysine biosynthesis	1	2
+Amino acid metabolism	00350 Tyrosine metabolism	1	2
+Amino acid metabolism	00400 Phenylalanine, tyrosine and tryptophan biosynthesis	1	2
+Metabolism	Glycan biosynthesis and metabolism	9	1
+Glycan biosynthesis and metabolism	00513 Various types of N-glycan biosynthesis	1	2
+Glycan biosynthesis and metabolism	00531 Glycosaminoglycan degradation	1	2
+Glycan biosynthesis and metabolism	00603 Glycosphingolipid biosynthesis - globo and isoglobo series	1	2
+Glycan biosynthesis and metabolism	00604 Glycosphingolipid biosynthesis - ganglio series	1	2
+Glycan biosynthesis and metabolism	00550 Peptidoglycan biosynthesis	1	2
+Glycan biosynthesis and metabolism	00511 Other glycan degradation	4	2
+Metabolism	Metabolism of cofactors and vitamins	7	1
+Metabolism of cofactors and vitamins	00760 Nicotinate and nicotinamide metabolism	1	2
+Metabolism of cofactors and vitamins	00770 Pantothenate and CoA biosynthesis	1	2
+Metabolism of cofactors and vitamins	00780 Biotin metabolism	1	2
+Metabolism of cofactors and vitamins	00670 One carbon pool by folate	2	2
+Metabolism of cofactors and vitamins	00830 Retinol metabolism	1	2
+Metabolism of cofactors and vitamins	00130 Ubiquinone and other terpenoid-quinone biosynthesis	1	2
+Metabolism	Metabolism of terpenoids and polyketides	4	1
+Metabolism of terpenoids and polyketides	00523 Polyketide sugar unit biosynthesis	3	2
+Metabolism of terpenoids and polyketides	01055 Biosynthesis of vancomycin group antibiotics	1	2
+Metabolism	Biosynthesis of other secondary metabolites	4	1
+Biosynthesis of other secondary metabolites	00521 Streptomycin biosynthesis	3	2
+Biosynthesis of other secondary metabolites	00525 Acarbose and validamycin biosynthesis	1	2
+Metabolism	Xenobiotics biodegradation and metabolism	6	1
+Xenobiotics biodegradation and metabolism	00625 Chloroalkane and chloroalkene degradation	1	2
+Xenobiotics biodegradation and metabolism	00626 Naphthalene degradation	1	2
+Xenobiotics biodegradation and metabolism	00980 Metabolism of xenobiotics by cytochrome P450	1	2
+Xenobiotics biodegradation and metabolism	00982 Drug metabolism - cytochrome P450	1	2
+Xenobiotics biodegradation and metabolism	00983 Drug metabolism - other enzymes	2	2
+Genetic Information Processing	Translation	3	1
+Translation	03010 Ribosome	2	2
+Translation	00970 Aminoacyl-tRNA biosynthesis	1	2
+Genetic Information Processing	Folding, sorting and degradation	2	1
+Folding, sorting and degradation	03060 Protein export	1	2
+Folding, sorting and degradation	03018 RNA degradation	1	2
+Genetic Information Processing	Replication and repair	41	1
+Replication and repair	03030 DNA replication	11	2
+Replication and repair	03410 Base excision repair	5	2
+Replication and repair	03420 Nucleotide excision repair	4	2
+Replication and repair	03430 Mismatch repair	11	2
+Replication and repair	03440 Homologous recombination	10	2
+Environmental Information Processing	Membrane transport	4	1
+Membrane transport	02010 ABC transporters	2	2
+Membrane transport	03070 Bacterial secretion system	2	2
+Environmental Information Processing	Signal transduction	7	1
+Signal transduction	02020 Two-component system	7	2
+Cellular Processes	Transport and catabolism	2	1
+Transport and catabolism	04142 Lysosome	2	2
+Cellular Processes	Cell growth and death	6	1
+Cell growth and death	04112 Cell cycle - Caulobacter	5	2
+Cell growth and death	04210 Apoptosis	1	2
+Cellular Processes	Cellular community - prokaryotes	9	1
+Cellular community - prokaryotes	02024 Quorum sensing	4	2
+Cellular community - prokaryotes	05111 Biofilm formation - Vibrio cholerae	2	2
+Cellular community - prokaryotes	02025 Biofilm formation - Pseudomonas aeruginosa	1	2
+Cellular community - prokaryotes	02026 Biofilm formation - Escherichia coli	2	2
+Cellular Processes	Cell motility	1	1
+Cell motility	02030 Bacterial chemotaxis	1	2

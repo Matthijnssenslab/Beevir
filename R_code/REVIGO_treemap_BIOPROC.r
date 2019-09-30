@@ -1,0 +1,230 @@
+
+
+# A treemap R script produced by the REVIGO server at http://revigo.irb.hr/
+# If you found REVIGO useful in your work, please cite the following reference:
+# Supek F et al. "REVIGO summarizes and visualizes long lists of Gene Ontology
+# terms" PLoS ONE 2011. doi:10.1371/journal.pone.0021800
+
+# author: Anton Kratz <anton.kratz@gmail.com>, RIKEN Omics Science Center, Functional Genomics Technology Team, Japan
+# created: Fri, Nov 02, 2012  7:25:52 PM
+# last change: Fri, Nov 09, 2012  3:20:01 PM
+
+# -----------------------------------------------------------------------------
+# If you don't have the treemap package installed, uncomment the following line:
+# install.packages( "treemap" );
+library(treemap) 								# treemap package by Martijn Tennekes
+
+# Set the working directory if necessary
+setwd("/Users/wd/Documents/Papers/Phagepaper/Code/")
+# --------------------------------------------------------------------------
+# Here is your data from REVIGO. Scroll down for plot configuration options.
+
+revigo.names <- c("term_ID","description","freqInDbPercent","value","uniqueness","dispensability","representative");
+revigo.data <- rbind(c("GO:0001906","cell killing",0.032,20.0000,0.995,0.000,"cell killing"),
+c("GO:0008150","biological_process",100.000,670.0000,1.000,0.000,"biological_process"),
+c("GO:0008152","metabolic process",75.387,357.0000,0.999,0.000,"metabolism"),
+c("GO:0009987","cellular process",63.780,305.0000,0.998,0.000,"cellular process"),
+c("GO:0022610","biological adhesion",0.550,73.0000,0.995,0.000,"biological adhesion"),
+c("GO:0034258","nicotinamide riboside transport",0.015,7.0000,0.972,0.000,"nicotinamide riboside transport"),
+c("GO:0055085","transmembrane transport",8.916,7.0000,0.987,0.255,"nicotinamide riboside transport"),
+c("GO:0006810","transport",17.616,6.0000,0.986,0.684,"nicotinamide riboside transport"),
+c("GO:0040007","growth",0.317,5.0000,0.995,0.000,"growth"),
+c("GO:0040011","locomotion",0.997,20.0000,0.995,0.000,"locomotion"),
+c("GO:0044419","interspecies interaction between organisms",0.262,368.0000,0.750,0.000,"interspecies interaction between organisms"),
+c("GO:0044826","viral genome integration into host DNA",0.000,4.0000,0.788,0.435,"interspecies interaction between organisms"),
+c("GO:0044033","multi-organism metabolic process",0.025,14.0000,0.769,0.682,"interspecies interaction between organisms"),
+c("GO:0044035","multi-organism catabolic process",0.000,14.0000,0.742,0.653,"interspecies interaction between organisms"),
+c("GO:0044040","multi-organism carbohydrate metabolic process",0.000,14.0000,0.779,0.607,"interspecies interaction between organisms"),
+c("GO:0051830","entry into other organism through barriers of other organism involved in symbiotic interaction",0.000,37.0000,0.776,0.602,"interspecies interaction between organisms"),
+c("GO:0098003","viral tail assembly",0.000,18.0000,0.746,0.656,"interspecies interaction between organisms"),
+c("GO:0039687","viral DNA strand displacement replication",0.000,17.0000,0.664,0.622,"interspecies interaction between organisms"),
+c("GO:0039695","DNA-templated viral transcription",0.000,72.0000,0.658,0.519,"interspecies interaction between organisms"),
+c("GO:0039678","viral genome ejection through host cell envelope",0.000,22.0000,0.778,0.553,"interspecies interaction between organisms"),
+c("GO:0019042","viral latency",0.001,8.0000,0.743,0.598,"interspecies interaction between organisms"),
+c("GO:0019044","maintenance of viral latency",0.000,4.0000,0.790,0.435,"interspecies interaction between organisms"),
+c("GO:0085027","entry into host via enzymatic degradation of host anatomical structure",0.000,37.0000,0.774,0.490,"interspecies interaction between organisms"),
+c("GO:0019072","viral genome packaging",0.002,78.0000,0.710,0.577,"interspecies interaction between organisms"),
+c("GO:0019075","virus maturation",0.001,4.0000,0.746,0.603,"interspecies interaction between organisms"),
+c("GO:0044278","cell wall disruption in other organism",0.000,14.0000,0.760,0.473,"interspecies interaction between organisms"),
+c("GO:0046797","viral procapsid maturation",0.000,4.0000,0.730,0.696,"interspecies interaction between organisms"),
+c("GO:0048519","negative regulation of biological process",1.984,48.0000,0.849,0.000,"negative regulation of biological process"),
+c("GO:0090066","regulation of anatomical structure size",0.216,9.0000,0.845,0.622,"negative regulation of biological process"),
+c("GO:0048523","negative regulation of cellular process",1.830,42.0000,0.761,0.334,"negative regulation of biological process"),
+c("GO:0048518","positive regulation of biological process",1.744,9.0000,0.852,0.332,"negative regulation of biological process"),
+c("GO:0023051","regulation of signaling",0.934,35.0000,0.852,0.308,"negative regulation of biological process"),
+c("GO:0032268","regulation of cellular protein metabolic process",1.473,4.0000,0.733,0.414,"negative regulation of biological process"),
+c("GO:0051716","cellular response to stimulus",9.561,29.0000,0.846,0.680,"negative regulation of biological process"),
+c("GO:0001959","regulation of cytokine-mediated signaling pathway",0.019,35.0000,0.787,0.379,"negative regulation of biological process"),
+c("GO:0051707","response to other organism",0.299,19.0000,0.879,0.358,"negative regulation of biological process"),
+c("GO:0051246","regulation of protein metabolic process",1.551,4.0000,0.757,0.453,"negative regulation of biological process"),
+c("GO:0048583","regulation of response to stimulus",1.120,35.0000,0.792,0.315,"negative regulation of biological process"),
+c("GO:0010646","regulation of cell communication",0.929,35.0000,0.820,0.308,"negative regulation of biological process"),
+c("GO:0019725","cellular homeostasis",1.253,11.0000,0.754,0.304,"negative regulation of biological process"),
+c("GO:0019222","regulation of metabolic process",11.942,18.0000,0.794,0.698,"negative regulation of biological process"),
+c("GO:0050794","regulation of cellular process",18.840,52.0000,0.760,0.499,"negative regulation of biological process"),
+c("GO:0009628","response to abiotic stimulus",0.571,8.0000,0.915,0.382,"negative regulation of biological process"),
+c("GO:0010608","posttranscriptional regulation of gene expression",0.719,4.0000,0.775,0.313,"negative regulation of biological process"),
+c("GO:2000884","glucomannan catabolic process",0.000,7.0000,0.888,0.622,"negative regulation of biological process"),
+c("GO:0010038","response to metal ion",0.132,4.0000,0.916,0.545,"negative regulation of biological process"),
+c("GO:0009607","response to biotic stimulus",0.342,19.0000,0.918,0.363,"negative regulation of biological process"),
+c("GO:0009605","response to external stimulus",1.370,28.0000,0.908,0.501,"negative regulation of biological process"),
+c("GO:0009992","cellular water homeostasis",0.001,9.0000,0.817,0.698,"negative regulation of biological process"),
+c("GO:0044093","positive regulation of molecular function",0.890,7.0000,0.860,0.292,"negative regulation of biological process"),
+c("GO:0065009","regulation of molecular function",1.726,7.0000,0.857,0.316,"negative regulation of biological process"),
+c("GO:0042221","response to chemical",3.071,30.0000,0.902,0.562,"negative regulation of biological process"),
+c("GO:0065008","regulation of biological quality",3.395,11.0000,0.846,0.345,"negative regulation of biological process"),
+c("GO:0010035","response to inorganic substance",0.317,4.0000,0.910,0.471,"negative regulation of biological process"),
+c("GO:0099018","restriction-modification system evasion by virus",0.000,5.0000,0.671,0.563,"negative regulation of biological process"),
+c("GO:0010944","negative regulation of transcription by competitive promoter binding",0.001,5.0000,0.758,0.508,"negative regulation of biological process"),
+c("GO:0030104","water homeostasis",0.012,9.0000,0.869,0.601,"negative regulation of biological process"),
+c("GO:0032535","regulation of cellular component size",0.179,9.0000,0.757,0.611,"negative regulation of biological process"),
+c("GO:0006109","regulation of carbohydrate metabolic process",0.090,22.0000,0.813,0.242,"negative regulation of biological process"),
+c("GO:0010391","glucomannan metabolic process",0.000,7.0000,0.932,0.387,"negative regulation of biological process"),
+c("GO:0009314","response to radiation",0.193,7.0000,0.922,0.344,"negative regulation of biological process"),
+c("GO:0006080","substituted mannan metabolic process",0.009,7.0000,0.913,0.341,"negative regulation of biological process"),
+c("GO:0009893","positive regulation of metabolic process",1.048,4.0000,0.815,0.426,"negative regulation of biological process"),
+c("GO:0006451","translational readthrough",0.017,4.0000,0.759,0.636,"negative regulation of biological process"),
+c("GO:0000160","phosphorelay signal transduction system",2.570,4.0000,0.721,0.603,"negative regulation of biological process"),
+c("GO:0006950","response to stress",4.575,33.0000,0.898,0.487,"negative regulation of biological process"),
+c("GO:0005976","polysaccharide metabolic process",0.906,8.0000,0.887,0.476,"negative regulation of biological process"),
+c("GO:0050896","response to stimulus",12.210,84.0000,0.995,0.000,"response to stimulus"),
+c("GO:0051179","localization",18.495,7.0000,0.996,0.000,"localization"),
+c("GO:0051704","multi-organism process",0.751,370.0000,0.995,0.000,"multi-organism process"),
+c("GO:0065007","biological regulation",20.498,71.0000,0.996,0.000,"biological regulation"),
+c("GO:0071840","cellular component organization or biogenesis",8.568,28.0000,0.995,0.000,"cellular component organization or biogenesis"),
+c("GO:0090305","nucleic acid phosphodiester bond hydrolysis",2.271,185.0000,0.794,0.000,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006304","DNA modification",0.339,9.0000,0.795,0.509,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006306","DNA methylation",0.190,149.0000,0.800,0.483,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0055086","nucleobase-containing small molecule metabolic process",4.917,23.0000,0.758,0.301,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006310","DNA recombination",1.641,26.0000,0.762,0.688,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006796","phosphate-containing compound metabolic process",13.110,40.0000,0.817,0.665,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006313","transposition, DNA-mediated",0.413,29.0000,0.778,0.519,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006270","DNA replication initiation",0.141,14.0000,0.786,0.697,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006275","regulation of DNA replication",0.116,14.0000,0.704,0.685,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0015074","DNA integration",0.682,20.0000,0.781,0.619,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006261","DNA-dependent DNA replication",0.576,18.0000,0.762,0.536,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006266","DNA ligation",0.102,4.0000,0.814,0.458,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006278","RNA-dependent DNA biosynthetic process",0.110,4.0000,0.784,0.645,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0000272","polysaccharide catabolic process",0.288,7.0000,0.813,0.647,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006281","DNA repair",2.234,132.0000,0.676,0.618,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0022616","DNA strand elongation",0.041,4.0000,0.826,0.425,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0016311","dephosphorylation",1.250,10.0000,0.858,0.294,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0016070","RNA metabolic process",15.951,42.0000,0.732,0.541,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0043150","DNA synthesis involved in double-strand break repair via homologous recombination",0.000,6.0000,0.809,0.456,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0071897","DNA biosynthetic process",0.676,174.0000,0.751,0.275,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0090501","RNA phosphodiester bond hydrolysis",0.748,37.0000,0.804,0.279,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0046434","organophosphate catabolic process",0.365,16.0000,0.776,0.664,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0055114","oxidation-reduction process",15.060,50.0000,0.912,0.320,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006355","regulation of transcription, DNA-templated",9.917,40.0000,0.571,0.695,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006352","DNA-templated transcription, initiation",0.766,13.0000,0.771,0.334,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0045493","xylan catabolic process",0.044,7.0000,0.810,0.687,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:1901575","organic substance catabolic process",4.612,45.0000,0.834,0.549,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:1901564","organonitrogen compound metabolic process",17.886,48.0000,0.851,0.211,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:1901137","carbohydrate derivative biosynthetic process",3.651,15.0000,0.818,0.534,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006139","nucleobase-containing compound metabolic process",26.547,273.0000,0.761,0.395,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:1901136","carbohydrate derivative catabolic process",0.423,31.0000,0.826,0.676,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009117","nucleotide metabolic process",4.166,23.0000,0.687,0.561,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0019438","aromatic compound biosynthetic process",16.954,199.0000,0.781,0.552,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009129","pyrimidine nucleoside monophosphate metabolic process",0.340,11.0000,0.750,0.685,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0043603","cellular amide metabolic process",6.879,5.0000,0.839,0.264,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009147","pyrimidine nucleoside triphosphate metabolic process",0.248,16.0000,0.754,0.661,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0042737","drug catabolic process",0.001,8.0000,0.892,0.357,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006231","dTMP biosynthetic process",0.048,62.0000,0.698,0.170,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006244","pyrimidine nucleotide catabolic process",0.002,16.0000,0.746,0.542,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009149","pyrimidine nucleoside triphosphate catabolic process",0.001,16.0000,0.769,0.567,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0015949","nucleobase-containing small molecule interconversion",0.001,9.0000,0.849,0.296,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0046065","dCTP metabolic process",0.000,5.0000,0.791,0.634,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009162","deoxyribonucleoside monophosphate metabolic process",0.100,14.0000,0.773,0.602,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006259","DNA metabolic process",5.607,280.0000,0.768,0.407,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006260","DNA replication",1.577,101.0000,0.745,0.684,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009200","deoxyribonucleoside triphosphate metabolic process",0.112,16.0000,0.768,0.609,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0090304","nucleic acid metabolic process",21.449,242.0000,0.737,0.597,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009262","deoxyribonucleotide metabolic process",0.236,19.0000,0.744,0.658,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006022","aminoglycan metabolic process",0.883,15.0000,0.819,0.644,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0009253","peptidoglycan catabolic process",0.145,31.0000,0.768,0.601,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0018130","heterocycle biosynthetic process",17.388,199.0000,0.779,0.556,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0046654","tetrahydrofolate biosynthetic process",0.101,10.0000,0.795,0.323,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0033567","DNA replication, Okazaki fragment processing",0.019,7.0000,0.809,0.596,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006412","translation",5.686,10.0000,0.723,0.696,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006414","translational elongation",0.777,4.0000,0.778,0.439,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006396","RNA processing",3.210,4.0000,0.769,0.371,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0044283","small molecule biosynthetic process",5.677,17.0000,0.818,0.545,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0072529","pyrimidine-containing compound catabolic process",0.037,16.0000,0.772,0.606,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0044281","small molecule metabolic process",15.138,25.0000,0.912,0.415,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0006979","response to oxidative stress",0.575,4.0000,0.903,0.657,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0072527","pyrimidine-containing compound metabolic process",1.037,19.0000,0.825,0.231,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0019692","deoxyribose phosphate metabolic process",0.169,16.0000,0.823,0.373,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:1901362","organic cyclic compound biosynthetic process",17.871,199.0000,0.794,0.545,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0034248","regulation of cellular amide metabolic process",0.700,4.0000,0.735,0.508,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0051103","DNA ligation involved in DNA repair",0.039,13.0000,0.768,0.628,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0034641","cellular nitrogen compound metabolic process",34.137,264.0000,0.817,0.484,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0016998","cell wall macromolecule catabolic process",0.059,65.0000,0.822,0.100,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0051672","catabolism by organism of cell wall peptidoglycan in other organism",0.000,14.0000,0.592,0.616,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0000731","DNA synthesis involved in DNA repair",0.019,6.0000,0.755,0.401,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0000724","double-strand break repair via homologous recombination",0.120,6.0000,0.746,0.695,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:0034654","nucleobase-containing compound biosynthetic process",14.533,198.0000,0.723,0.526,"nucleic acid phosphodiester bond hydrolysis"),
+c("GO:1902074","response to salt",0.003,22.0000,0.933,0.000,"response to salt"),
+c("GO:0009056","catabolic process",4.820,45.0000,0.973,0.020,"catabolism"),
+c("GO:0032259","methylation",3.103,19.0000,0.974,0.021,"methylation"),
+c("GO:0006457","protein folding",0.903,6.0000,0.957,0.038,"protein folding"),
+c("GO:0071554","cell wall organization or biogenesis",0.950,7.0000,0.957,0.039,"cell wall organization or biogenesis"),
+c("GO:0071704","organic substance metabolic process",58.357,294.0000,0.960,0.039,"organic substance metabolism"),
+c("GO:0006793","phosphorus metabolic process",13.507,35.0000,0.901,0.185,"organic substance metabolism"),
+c("GO:0044237","cellular metabolic process",53.061,287.0000,0.915,0.119,"organic substance metabolism"),
+c("GO:0044238","primary metabolic process",53.743,292.0000,0.961,0.120,"organic substance metabolism"),
+c("GO:0044260","cellular macromolecule metabolic process",34.276,243.0000,0.821,0.260,"organic substance metabolism"),
+c("GO:0044267","cellular protein metabolic process",14.293,8.0000,0.823,0.562,"organic substance metabolism"),
+c("GO:0046483","heterocycle metabolic process",29.664,263.0000,0.887,0.245,"organic substance metabolism"),
+c("GO:0006725","cellular aromatic compound metabolic process",29.628,263.0000,0.887,0.176,"organic substance metabolism"),
+c("GO:0019538","protein metabolic process",18.489,11.0000,0.866,0.408,"organic substance metabolism"),
+c("GO:0010467","gene expression",19.671,6.0000,0.870,0.417,"organic substance metabolism"),
+c("GO:0006508","proteolysis",5.223,36.0000,0.879,0.280,"organic substance metabolism"),
+c("GO:0006996","organelle organization",3.595,9.0000,0.898,0.046,"organelle organization"),
+c("GO:0051259","protein oligomerization",0.188,4.0000,0.912,0.507,"organelle organization"),
+c("GO:0051276","chromosome organization",1.477,8.0000,0.903,0.646,"organelle organization"),
+c("GO:0022607","cellular component assembly",2.484,8.0000,0.897,0.694,"organelle organization"),
+c("GO:0044085","cellular component biogenesis",4.355,8.0000,0.940,0.696,"organelle organization"),
+c("GO:0043933","macromolecular complex subunit organization",2.371,6.0000,0.902,0.689,"organelle organization"),
+c("GO:0017144","drug metabolic process",0.058,8.0000,0.944,0.053,"drug metabolism"),
+c("GO:0007154","cell communication",7.219,9.0000,0.946,0.055,"cell communication"),
+c("GO:0006629","lipid metabolic process",3.522,21.0000,0.894,0.081,"lipid metabolism"),
+c("GO:0009059","macromolecule biosynthetic process",19.548,189.0000,0.814,0.558,"lipid metabolism"),
+c("GO:0044249","cellular biosynthetic process",30.048,213.0000,0.817,0.658,"lipid metabolism"),
+c("GO:0043170","macromolecule metabolic process",39.491,271.0000,0.912,0.105,"lipid metabolism"),
+c("GO:0044271","cellular nitrogen compound biosynthetic process",22.502,200.0000,0.771,0.587,"lipid metabolism"),
+c("GO:1901576","organic substance biosynthetic process",30.365,213.0000,0.838,0.211,"lipid metabolism"),
+c("GO:1901566","organonitrogen compound biosynthetic process",14.064,18.0000,0.783,0.500,"lipid metabolism"),
+c("GO:1901135","carbohydrate derivative metabolic process",6.319,39.0000,0.934,0.122,"lipid metabolism"),
+c("GO:1901360","organic cyclic compound metabolic process",30.324,263.0000,0.916,0.211,"lipid metabolism"),
+c("GO:0005975","carbohydrate metabolic process",5.260,28.0000,0.926,0.116,"lipid metabolism"),
+c("GO:0034645","cellular macromolecule biosynthetic process",19.291,189.0000,0.759,0.555,"lipid metabolism"),
+c("GO:0009058","biosynthetic process",31.611,227.0000,0.965,0.082,"biosynthesis"),
+c("GO:0006807","nitrogen compound metabolic process",38.744,286.0000,0.963,0.094,"nitrogen compound metabolism"));
+
+stuff <- data.frame(revigo.data);
+names(stuff) <- revigo.names;
+
+stuff$value <- as.numeric( as.character(stuff$value) );
+stuff$freqInDbPercent <- as.numeric( as.character(stuff$freqInDbPercent) );
+stuff$uniqueness <- as.numeric( as.character(stuff$uniqueness) );
+stuff$dispensability <- as.numeric( as.character(stuff$dispensability) );
+
+# by default, outputs to a PDF file
+pdf( file="revigo_treemap_BIOPROC.pdf", width=16, height=9 ) # width and height are in inches
+
+# check the tmPlot command documentation for all possible parameters - there are a lot more
+treemap(
+	stuff,
+	index = c("representative","description"),
+	vSize = "value",
+	type = "categorical",
+	vColor = "representative",
+	title = "REVIGO Gene Ontology treemap",
+	inflate.labels = FALSE,      # set this to TRUE for space-filling group labels - good for posters
+	lowerbound.cex.labels = 0,   # try to draw as many labels as possible (still, some small squares may not get a label)
+	bg.labels = "#CCCCCCAA",     # define background color of group labels
+												       # "#CCCCCC00" is fully transparent, "#CCCCCCAA" is semi-transparent grey, NA is opaque
+	position.legend = "none"
+)
+
+dev.off()
