@@ -1,4 +1,0 @@
-chr - BeeP-11-2013_NODE_10_length_45562_cov_39_780829 1 0 45562 green
-chr - BeeP-11-2013_NODE_169_length_5958_cov_160_716545 2 0 5958 yellow
-chr - BeeP-11-2013_NODE_890_length_1940_cov_18_632850 3 0 1940 blue
-chr - BeeP-38-2013_NODE_1_length_47472_cov_756_510180 4 0 47472 red
