@@ -7,7 +7,7 @@ library("ggstance")
 library("reshape2")
 library("ggplotify")
 
-setwd("/Users/wd/Documents/Papers/Phagepaper/Code/inputdata/host")
+setwd("/Users/wd/Documents/Papers/Phagepaper/Original/Code/inputdata/host")
 #png("/Users/wd/Documents/Papers/Phagepaper/Figures/Bacterial_phylo.png", units="px", width=2200, height=1500, res=300)
 
 #Read tree:
@@ -28,14 +28,18 @@ trnahits <- read.delim("contigshits_tRNA.csv")
 #OTUlist:
 cls <- list(Lacto=c("Lactobacillus_melliventris_Hma8", "Lactobacillus_melliventris_Lb_184", "Lactobacillus_kimbladii_Hma2", "Lactobacillus_kullabergensis_Biut2", "Lactobacillus_kullabergensis_Lb_186", "Lactobacillus_helsingborgensis_Bma5","Lactobacillus_helsinborgensis_Lb_183","Lactobacillus_mellifer_Bin4","Lactobacillus_mellis_Hon2","Lactobacillus_apis_Lb_185","Lactobacillus_apis_Hma11"),
             Bifido=c("Bifidobacterium_coryneforme_Bi_197", "Bifidobacterium_coryneforme_Bma6", "Bifidobacterium_asteroides_Bi_200","Bifidobacterium_asteroides_Bi_170","Bifidobacterium_asteroides_Bi_199","Bifidobacterium_asteroides_Hma3","Bifidobacterium_asteroides_Bi_198","Bifidobacterium_asteroides_Bin7","Bifidobacterium_asteroides_Bin2"),
-            c3=c("Gilliamella_apicola_Ga_178", "Gilliamella_apicola_Ga_177", "Gilliamella_apicola_Ga_182", "Gilliamella_apicola_Ga_172","Gilliamella_apicola_Ga_169"))
+            c3=c("Gilliamella_apicola_Ga_178", "Gilliamella_apicola_Ga_177", "Gilliamella_apicola_Ga_182", "Gilliamella_apicola_Ga_172","Gilliamella_apicola_Ga_169"),
+            c4=c("Frischella_perrara_Fp_167"),
+            c5=c("Snodgrassella_alvi_Sa_196"),
+            c6 = c("Commensalibacter_sp._ESL0284"))
 bactree <- groupOTU(bactree, cls)
-colvec <- c(viridis(4,begin=0.05, end=0.95))[c(3,2,4)]
-colvec1 <- c(colvec, plasma(1, begin=0.7, end=0.8),"Black")
+#colvec <- c(viridis(4,begin=0.05, end=0.95))[c(3,2,4)]
+#colvec1 <- c(colvec, plasma(1, begin=0.7, end=0.8),"Black")
 
+colvec2 <- c("#2FB47CFF","#2F6C8EFF","#DEE318FF","#F1844BFF","#AF968BFF","#20A387FF","black")
 
 p <- ggtree(bactree,aes(color=group)) +
-  scale_color_manual(values=colvec1) +
+  scale_color_manual(values=colvec2) +
   geom_tiplab(align=TRUE,linetype="dotted",linesize = 0.3, offset=0.12,size=1.5) +
   geom_treescale(fontsize=2) + 
   geom_nodelab(aes(label=label),alpha=0.5,color='black', size=2, nudge_x=-0.05, nudge_y=0.2) +
@@ -167,14 +171,6 @@ p7 <- p6 + ggtree::xlim_expand(xlim=c(0,15), panel="tRNAs")
 p8 <- facet_widths(p7, c(4,1,1))
 p8
 #dev.off()
-
-
-
-
-
-
-## To do: reorder stacks in barplot + colors
-
 
 
 
