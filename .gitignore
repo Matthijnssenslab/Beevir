@@ -1,0 +1,4 @@
+#Mac stuff:
+.DS_Store.
+#Notebook temps/
+.ipynb_checkpoints

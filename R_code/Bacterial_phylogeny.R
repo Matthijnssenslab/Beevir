@@ -169,8 +169,9 @@ p5 <- ggtree::facet_plot(p4, panel = 'tRNAs', data = trnahits, geom = geom_barh,
 p6 <- p5
 p7 <- p6 + ggtree::xlim_expand(xlim=c(0,15), panel="tRNAs")
 p8 <- facet_widths(p7, c(4,1,1))
+
 p8
-#dev.off()
+dev.off()
 
 
 
