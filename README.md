@@ -2,8 +2,9 @@
 Collection of JP books, Rcode & circos configuration files for the prokaryotic viruses associated with bees.
 
 Raw fasta files are available at:
-    - 2Stats/data/Putativephage_DNARNA.fna (nucleotide)
-    - 2Stats/data/Putativephage_DNARNA.faa (proteins, prodigal predicted)
+
+ * 2Stats/data/Putativephage_DNARNA.fna (nucleotide)
+ * 2Stats/data/Putativephage_DNARNA.faa (proteins, prodigal predicted)
 
 ## 1. Sample sharing
 
