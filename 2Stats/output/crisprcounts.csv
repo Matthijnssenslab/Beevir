@@ -1,9 +1,9 @@
-,1,2,3,4,5
+,1,2,3,5,4
 Lactobacillus_kullabergensis_Lb_186,4.0,3.0,0.0,0.0,0.0
 Lactobacillus_apis_Lb_185,4.0,0.0,0.0,0.0,0.0
 Lactobacillus_melliventris_Lb_184,0.0,0.0,1.0,0.0,0.0
 Lactobacillus_helsinborgensis_Lb_183,0.0,1.0,0.0,0.0,0.0
-Bifidobacterium_asteroides_Bi_170,0.0,1.0,1.0,0.0,1.0
+Bifidobacterium_asteroides_Bi_170,0.0,1.0,1.0,1.0,0.0
 Bifidobacterium_asteroides_Bi_198,3.0,1.0,0.0,1.0,1.0
 Bifidobacterium_asteroides_Bi_199,2.0,1.0,0.0,1.0,1.0
 Bifidobacterium_asteroides_Bi_200,3.0,1.0,1.0,0.0,0.0
@@ -14,8 +14,8 @@ Gilliamella_apicola_Ga_178,4.0,1.0,1.0,0.0,0.0
 Gilliamella_apicola_Ga_182,3.0,1.0,1.0,0.0,0.0
 Lactobacillus_kimbladii_Hma2,9.0,2.0,1.0,0.0,0.0
 Lactobacillus_apis_Hma11,1.0,0.0,0.0,0.0,0.0
-Bifidobacterium_asteroides_Bin2,6.0,2.0,0.0,0.0,1.0
+Bifidobacterium_asteroides_Bin2,6.0,2.0,0.0,1.0,0.0
 Lactobacillus_kullabergensis_Biut2,3.0,2.0,0.0,0.0,0.0
 Lactobacillus_melliventris_Hma8,5.0,2.0,1.0,0.0,0.0
 Bifidobacterium_asteroides_Bin7,2.0,1.0,1.0,1.0,1.0
-Bifidobacterium_asteroides_Hma3,4.0,1.0,0.0,1.0,0.0
+Bifidobacterium_asteroides_Hma3,4.0,1.0,0.0,0.0,1.0

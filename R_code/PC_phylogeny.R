@@ -1,6 +1,7 @@
 #Fix all accessions + refs + color by family 
 library(ggtree)
-setwd("/Users/wd/Documents/Papers/Phagepaper/Code/inputdata/Vcontact_phylogeny")
+setwd("/Users/wd/Documents/Papers/Phagepaper/Older/Original/Code/inputdata/Vcontact_phylogeny")
+
 
 PC0 <- read.tree("RAxML_bipartitions.PC_00000.nodes.refs.AL.TRIM.raxml")
 PC1 <- read.tree("RAxML_bipartitions.PC_00001.nodes.refs.AL.TRIM.raxml")

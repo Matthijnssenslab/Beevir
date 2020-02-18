@@ -1,0 +1,21 @@
+Node,Clusstatus,Cluster,taxonomy,host,crispdbhost
+BP23_NODE_2_length_42653_cov_45_250447,Clustered,VC_188_0,Mixed,Mixed-like_bee-phage_24,NA,NA
+BP49_NODE_1_length_65331_cov_17_543582,Clustered,VC_261_0,Siphoviridae,Siphoviridae-like_bee-phage_4,NA,NA
+BP50_NODE_1_length_71699_cov_19_894646,Clustered,VC_6_2,Podoviridae,Podoviridae-like_bee-phage_3,NA,NA
+BP50_NODE_4_length_51643_cov_134_843310,Clustered,VC_167_0,Podoviridae,Podoviridae-like_bee-phage_7,NA,NA
+BP50_NODE_5_length_45555_cov_7_532597,Clustered,VC_188_0,Mixed,Mixed-like_bee-phage_17,Lactobacillus,Lactobacillus
+BeeP-06-2013_NODE_1_length_28373_cov_138_815486,Clustered,VC_366_0,Siphoviridae,Siphoviridae-like_bee-phage_62,Bifidobacterium,NA
+BeeP-11-2013_NODE_1_length_180431_cov_45_996640,Clustered,VC_59_12,Myoviridae,Myoviridae-like_bee-phage_1,NA,NA
+BeeP-11-2013_NODE_6_length_47542_cov_634_671885,Clustered,VC_54_1,Mixed,Mixed-like_bee-phage_11,NA,Hafnia
+BeeP-11-2013_NODE_8_length_46852_cov_48_771438,Clustered,VC_39_0,Podoviridae,Podoviridae-like-bee-phage_14,NA,NA
+BeeP-35-2013_NODE_1_length_48212_cov_109_842256,Clustered,VC_54_1,Mixed,Mixed-like_bee-phage_10,NA,Pluralibacter
+BeeP-37-2013_NODE_2_length_40678_cov_31_109505,Clustered,VC_49_1,Myoviridae,Myoviridae-like_bee-phage_28,NA,NA
+BeeP-38-2013_NODE_1_length_47472_cov_756_510180,Clustered,VC_188_0,Mixed,Mixed-like_bee-phage_12,Lactobacillus,NA
+BeeP-43-2013_NODE_2_length_4729_cov_13_984308,Clustered,VC_284_0,Microviridae,NA,NA,NA
+BeeP-45-2013_NODE_1_length_31866_cov_26_676051,Clustered,VC_352_0,Myoviridae,Myoviridae-like_bee-phage_53,Bifidobacterium,Bifidobacterium
+BP32_NODE_2_length_41333_cov_117_683684,Overlap (VC_168/VC_170),NA,NA,NA,Bartonella
+BeeP-11-2013_NODE_17_length_39362_cov_35_956828,Outlier,NA,NA,NA,NA
+BeeP-11-2013_NODE_457_length_2984_cov_21_251462,Outlier,NA,NA,NA,NA
+BeeP-11-2013_NODE_61_length_13003_cov_97_347130,Singleton,NA,NA,NA,NA
+BeeP-36-2013_NODE_1_length_32049_cov_19_863443,Overlap (VC_353/VC_354),NA,NA,NA,NA
+BeeP-11-2013_NODE_2_length_102270_cov_31_231611,Singleton,NA,NA,000,NA,NA
