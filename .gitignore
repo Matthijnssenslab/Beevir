@@ -3,3 +3,5 @@
 #Notebook temps/
 .ipynb_checkpoints
 */.ipynb_checkpoints/*.ipynb
+#Large taxonomy dumps:
+*.dmp
