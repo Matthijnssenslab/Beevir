@@ -12,7 +12,7 @@ Creates sample / contig sharing networks from coverage / count data.
 
 ## 2. Stats
 
-Basic genome statistics, Host calling information, dimension reduction (PHATE).
+Basic genome statistics, Host calling information, dimension reduction (PHATE/PCoA).
 
 ## 3. Vcontact
 
