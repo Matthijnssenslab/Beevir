@@ -1,5 +1,5 @@
 # Beevir
-Collection of JP books, Rcode & circos configuration files for the prokaryotic viruses associated with bees.
+Collection of JP books, Rcode & circos configuration files for the prokaryotic viruses associated with bees (https://doi.org/10.1073/pnas.1921859117).
 
 Raw fasta files are available at:
 
